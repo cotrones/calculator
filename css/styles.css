@@ -5,15 +5,60 @@ body {
 
 div {
 	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-between;
 }
 
-div#main {
-	flex-direction: column;
-	margin: 0 auto;
+div.flex-col {
+	flex-flow: column wrap;
 }
 
 h1 {
-	font-size: 48px;
-	font-weight: bold;
 	margin: 40px auto 0 auto;
+	font-size: 3em;
+	font-weight: bold;
+}
+
+div#calculator {
+	width: 400px;
+	padding: 2em;
+	margin: 3em auto;
+	border: 3px solid #000;
+	border-radius: 25px;
+}
+
+div#scrn {
+	justify-content: flex-end;
+	align-items: center;
+	width: 100%;
+	height: 100px;
+	padding: 0 15px;
+	margin-bottom: 1em;
+	background-color: #D0E6A8;
+	border: 2px solid #000;
+	border-radius: 10px;
+	font-size: 2em;
+}
+
+div.btn-row {
+	padding: 10px 0;
+}
+
+div.calc-btn {
+	justify-content: center;
+	align-items: center;
+	height: 75px;
+	width: 85px;
+	color: #fff;
+	font-size: 2em;
+	font-weight: bold;
+	background-color: #4D4D4D;
+}
+
+div.opp {
+	background-color: #65C7D0;
+}
+
+div.action {
+	background-color: #E95D5E;
 }
