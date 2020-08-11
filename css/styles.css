@@ -1,64 +1,77 @@
-body {
+*, *::before, *::after {
+	box-sizing: border-box;
 	font-family: 'Rajdhani', sans serif;
+}
+
+body {
+	padding: 0;
+	margin: 0;
 	background-color: #d2d2d2;
 }
 
-div {
-	display: flex;
-	flex-flow: row wrap;
-	justify-content: space-between;
-}
-
-div.flex-col {
-	flex-flow: column wrap;
-}
-
 h1 {
-	margin: 40px auto 0 auto;
-	font-size: 3em;
-	font-weight: bold;
+	margin: 40px auto 40px auto;
+	text-align: center;
+	font-size: 3rem;
 }
 
-div#calculator {
-	width: 400px;
-	padding: 2em;
-	margin: 3em auto;
-	border: 3px solid #000;
-	border-radius: 25px;
-}
-
-div#scrn {
-	justify-content: flex-end;
-	align-items: center;
-	width: 100%;
-	height: 100px;
-	padding: 0 15px;
-	margin-bottom: 1em;
-	background-color: #D0E6A8;
-	border: 2px solid #000;
-	border-radius: 10px;
-	font-size: 2em;
-}
-
-div.btn-row {
-	padding: 10px 0;
-}
-
-div.calc-btn {
+#calc-grid {
+	display: grid;
 	justify-content: center;
-	align-items: center;
-	height: 75px;
-	width: 85px;
+	align-content: center;
+	grid-template-columns: repeat(4, 75px);
+	grid-template-rows: minmax(120px, auto) repeat(5, 75px);
+	grid-column-gap: 10px;
+	grid-row-gap: 10px;
+}
+
+#calc-grid button {
+	cursor: pointer;
+	font-size: 2rem;
+	outline: none;
+	border: none;
+	border-radius: 10px;
 	color: #fff;
-	font-size: 2em;
 	font-weight: bold;
-	background-color: #4D4D4D;
+	background-color: #4d4d4d;
+	transition: all .1s ease-in-out;
 }
 
-div.opp {
-	background-color: #65C7D0;
+#calc-grid button.span-two {
+	grid-column: span 2;
 }
 
-div.action {
-	background-color: #E95D5E;
+#calc-grid button.action {
+	background-color: #e95d5e;
+}
+
+#calc-grid button.opp {
+	background-color: #65c7d0;
+}
+
+#calc-grid button:hover {
+	transform: scale(1.1);
+}
+
+#scrn {
+	grid-column: 1 / -1;
+	padding: 10px;
+	background-color: #d0e6a8;
+	border: 1px solid #000;
+	border-radius: 10px;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
+	justify-content: space-around;
+	word-wrap: break-word;
+	word-break: break-all;
+}
+
+#scrn #formula {
+	color: #444;
+	font-weight: bold;
+}
+
+#scrn #result {
+	font-size: 2.5rem;
 }

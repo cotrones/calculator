@@ -3,52 +3,42 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Calculator</title>
-	<link rel="stylesheet" type="text/css" href="css/reset.css">
+	<!-- <link rel="stylesheet" type="text/css" href="css/reset.css"> -->
 	<link href="https://fonts.googleapis.com/css?family=Rajdhani:400,700" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="css/styles.css">
+
+	<script type="text/javascript" src="js/scripts.js" defer></script>
 </head>
 <body>
-	<div>
+	<div id="main">
 		<h1>Calculator</h1>
-	</div>
-	<div class="flex-col" id="calculator">
-		<div>
-			<div id="scrn">Calculate!!</div>
-		</div>
-		<div class="flex-col">
-			<div class="btn-row">
-				<div class="calc-btn action">AC</div>
-				<div class="calc-btn action">DEL</div>
-				<div class="calc-btn opp">%</div>
-				<div class="calc-btn opp">&divide;</div>
-			</div>
-			<div class="btn-row">
-				<div class="calc-btn">7</div>
-				<div class="calc-btn">8</div>
-				<div class="calc-btn">9</div>
-				<div class="calc-btn opp">&times;</div>
-			</div>
-			<div class="btn-row">
-				<div class="calc-btn">4</div>
-				<div class="calc-btn">5</div>
-				<div class="calc-btn">6</div>
-				<div class="calc-btn opp">&#45;</div>
-			</div>
-			<div class="btn-row">
-				<div class="calc-btn">1</div>
-				<div class="calc-btn">2</div>
-				<div class="calc-btn">3</div>
-				<div class="calc-btn opp">&#43;</div>
-			</div>
-			<div class="btn-row">
-				<div class="calc-btn">+/-</div>
-				<div class="calc-btn">0</div>
-				<div class="calc-btn">&middot;</div>
-				<div class="calc-btn action">=</div>				
+		<div id="calculator">
+			<div id="calc-grid">
+				<div id="scrn">
+					<div id="formula"></div>
+					<div id="result"></div>
+				</div>
+				<button data-clear class="action">AC</button>
+				<button data-delete class="action">DEL</button>
+				<button class="opp">%</button>
+				<button class="opp">&divide;</button>
+				<button data-number>7</button>
+				<button data-number>8</button>
+				<button data-number>9</button>
+				<button class="opp">&times;</button>
+				<button data-number>4</button>
+				<button data-number>5</button>
+				<button data-number>6</button>
+				<button class="opp">-</button>
+				<button data-number>1</button>
+				<button data-number>2</button>
+				<button data-number>3</button>
+				<button class="opp">+</button>
+				<button data-number class="span-two">0</button>
+				<button data-number>.</button>
+				<button data-equals class="action">=</button>
 			</div>
 		</div>
 	</div>
-
-	<script type="text/javascript" src="js/scripts.js"></script>
 </body>
 </html>
