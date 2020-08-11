@@ -207,7 +207,8 @@ window.addEventListener('keydown', (e) => {
 		case 67:
 			calculator.clear();
 			break;
-
+		default:
+			return;
 	}
 	calculator.updateDisplay();
 })
